@@ -1,8 +1,10 @@
-# Getting started with Pandas and Mastering pandas (formerly Explore, visualize, and predict using pandas and Jupyter)
+# Getting started with pandas and Mastering pandas (formerly Explore, visualize, and predict using pandas and jupyter)
 
 ![Powered by Jupyter Logo](https://cdn.oreillystatic.com/images/icons/powered_by_jupyter.png)
 
 This project contains the Jupyter Notebooks and the associated Dockerfile for Matt Harrison's courses **Getting started with Pandas** and **Mastering pandas**. Prior to June 2018, this was a two-day course entitled, **Explore, visualize, and predict using pandas and Jupyter**. It contains both the exercises and the solutions.
+
+You can use the notebooks directly in platform [here](https://learning.oreilly.com/jupyter-notebooks/~/9781492063063).
 
 This is a public repository so there is no need to create an account to download its contents. To download the source code from this page, click the 'Cloud' icon on the top right hand, above where the latest commit is detailed.
 
@@ -11,8 +13,6 @@ To download via git from your preferred terminal application, type:
 ```git clone https://resources.oreilly.com/live-training/explore-visualize-and-predict-using-pandas-and-jupyter```
 
 ## Running Jupyter Locally via Docker
-
-We've shared the same Dockerfile we use for our JupyterHub session in this repository, to make sure you can run all of these notebooks in your own time, on your own machine. This isn't required during class, but can be useful for learning once the session is over.
 
 You will need to have Docker installed on your system to create images and run containers. You can find the installation steps for all platforms on the company's [website](https://docs.docker.com/install/)
 .
