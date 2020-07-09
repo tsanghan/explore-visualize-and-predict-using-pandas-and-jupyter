@@ -10,6 +10,7 @@ RUN pip install -r requirements.txt
 # Add files
 COPY *.ipynb /home/jovyan/
 COPY Solutions /home/jovyan/solutions
+COPY Class /home/jovyan/class
 COPY data /home/jovyan/data
 COPY postBuild /home/jovyan/postBuild
 
