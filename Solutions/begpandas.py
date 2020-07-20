@@ -374,6 +374,9 @@ nyc.assign(**{' Events': nyc[' Events'].fillna('')})
 nyc.PrecipitationIn * 2.54
 
 
+# convert PrecipitationIn
+nyc2 = (nyc.assign(PrecipitationIn = pd.to_numeric(nyc.PrecipitationIn.replace("T", '0.001')))
+
 # +
 # can also apply an arbitrary function, though this will be slow as it is not vectorized
 #   map - works with a dictionary (mapping value to new value),  series (like dict), function
@@ -383,17 +386,18 @@ nyc.PrecipitationIn * 2.54
 def to_cm(val):
     return val * 2.54
 
-nyc.PrecipitationIn.transform(to_cm)
+nyc2.PrecipitationIn.transform(to_cm)
+
 # -
 
 # %%timeit
-nyc.PrecipitationIn.map(to_cm)
+nyc2.map(to_cm)
 
 # %%timeit
-nyc.PrecipitationIn.transform(to_cm)
+nyc2.PrecipitationIn.transform(to_cm)
 
 # %%timeit
-nyc.PrecipitationIn*2.54
+nyc2.PrecipitationIn*2.54
 
 # can add and drop columns (axis=1 means along the columns axis)
 # Note that we can access some columns with attribute access
