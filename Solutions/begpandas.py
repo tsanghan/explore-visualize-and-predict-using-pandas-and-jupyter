@@ -210,7 +210,7 @@ nyc.head()
 #
 #     The data is stored in an ASCII files with one observation per line. Spaces separate fields and periods (.) denote missing values.
 #
-# * Create a ``nino`` variable with the data from the ``data/tao-all2.dat.gz`` file (use ``pd.read_csv``)
+# * Create a ``nino`` variable with the data from the ``../data/tao-all2.dat.gz`` file (use ``pd.read_csv``)
 # * Use the ``names`` variable for the initial column names (taken from website). They are:
 #
 #  * obs
@@ -375,7 +375,7 @@ nyc.PrecipitationIn * 2.54
 
 
 # convert PrecipitationIn
-nyc2 = (nyc.assign(PrecipitationIn = pd.to_numeric(nyc.PrecipitationIn.replace("T", '0.001')))
+nyc2 = (nyc.assign(PrecipitationIn = pd.to_numeric(nyc.PrecipitationIn.replace("T", '0.001'))))
 
 # +
 # can also apply an arbitrary function, though this will be slow as it is not vectorized
